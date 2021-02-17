@@ -18,8 +18,10 @@ pipeline {
             }
         }
         stage('SonarQube analysis') {
-            withSonarQubeEnv() { // You can override the credential to be used
-              sh './mvnw org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
+            steps {
+                withSonarQubeEnv() { // You can override the credential to be used
+                  sh './mvnw org.sonarsource.scanner.maven:sonar-maven-plugin:3.7.0.1746:sonar'
+                }
             }
         }
         stage('Deploy') {
