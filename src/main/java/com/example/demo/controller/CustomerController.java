@@ -19,6 +19,7 @@ public class CustomerController {
     @PostMapping("/save")
     public String calc(@RequestBody Customer customer) {
 
+
         customerRepository.save(customer);
         return "";
     }
