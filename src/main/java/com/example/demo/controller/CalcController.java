@@ -15,7 +15,6 @@ public class CalcController {
     public List<Float> calc(@RequestBody List<Test> tests){
 
         return calcs(tests);
-
     }
 
     private List<Float> calcs(List<Test> tests) {
