@@ -13,6 +13,7 @@ public class CalcController {
 
     @GetMapping("/calc")
     public List<Float> calc(@RequestBody List<Test> tests){
+
         return calcs(tests);
     }
 
